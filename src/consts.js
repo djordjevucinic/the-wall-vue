@@ -1,6 +1,4 @@
-import type { SlideItem, Slide } from "./types";
-
-const slideData: SlideItem[] = [
+const slideData = [
   {
     id: 1,
     imageUrl:
@@ -7131,7 +7129,7 @@ const slideData: SlideItem[] = [
   },
 ];
 
-export const data: Slide[] = [
+export const data = [
   { id: 1, label: "new_york", slides: slideData },
   { id: 2, label: "tokyo", slides: slideData },
   { id: 3, label: "belgrade", slides: slideData },
