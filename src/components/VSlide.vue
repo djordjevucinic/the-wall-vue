@@ -1,21 +1,17 @@
-<script setup lang="ts">
-import type { Slide } from "../types";
+<script setup>
 import VCard from "./VCard.vue";
-
-defineProps<{
-  slide: Slide;
-}>();
+const props = defineProps(["slide"]);
 </script>
 
 <template>
   <div class="embla_slide">
-    <h1>{{ slide.label }}</h1>
+    <h1>{{ props.slide.label }}</h1>
     <div class="card_wrapper">
       <VCard
-        v-for="item in slide.slides"
+        v-for="item in props.slide.slides"
         :key="item.id"
         :item="item"
-        :slideLabel="slide.label"
+        :slideLabel="props.slide.label"
       />
     </div>
   </div>

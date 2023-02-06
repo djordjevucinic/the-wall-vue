@@ -1,20 +1,16 @@
-<script setup lang="ts">
-import type { SlideItem } from "@/types";
+<script setup>
+const props = defineProps(["item", "slideLabel"]);
 
-defineProps<{
-  item: SlideItem;
-  slideLabel: string;
-}>();
-
-function handleClick({ item, slideLabel }: any) {
+function handleClick(item, slideLabel) {
   console.log("Item", item, slideLabel);
 }
 </script>
 
 <template>
-  <div class="card" @click="() => handleClick({ item, slideLabel })">
-    <!-- <img :src="item.imageUrl" :alt="item.title" /> -->
-  </div>
+  <div
+    class="card"
+    @click="() => handleClick(props.item, props.slideLabel)"
+  ></div>
 </template>
 
 <style scoped>
